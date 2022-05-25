@@ -1,0 +1,69 @@
+\ProvidesPackage{ProjectSpecificAdditionalPackages}
+
+\usetheme{Stantec}
+\usepackage{framed}
+%\usepackage{libertine}
+\usepackage{animate}
+\usepackage{xpatch}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{pgfplots}
+\usetikzlibrary{spy, calc}
+\usepackage{pgfplotstable}
+\usepackage{import}
+\usepackage[backend=biber, style=authoryear]{biblatex}
+\addbibresource{references.bib}
+\DeclareAutoCiteCommand{inlinetext}{\textcite}{\textcites}
+\ExecuteBibliographyOptions{autocite=inlinetext}
+%\AtBeginBibliography{\small}
+
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{wrapfig}
+\usepackage{csquotes}
+\usepackage{pifont}
+\usepackage[labelfont={color=black,bf}]{caption}
+\usepackage{color, colortbl}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+\setbeamercolor*{item}{fg=color1}
+\setbeamertemplate{itemize items}[circle]
+
+\setbeamerfont{caption name}{series=\bfseries}
+%
+\setbeamertemplate{caption}[numbered]
+%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamercolor{framesource}{fg=gray}
+\setbeamerfont{framesource}{size=\tiny}
+
+\newcommand{\source}[1]{\par\hfill \tiny Fuente:~\itshape#1}
+%%%%%%%%
+
+\usefonttheme[onlymath]{serif}
+
+\setbeamercovered{transparent=20}
+%%%%%%%%%%%
+\usetikzlibrary{overlay-beamer-styles}
+\tikzset{
+    highlight on/.style={alt={#1{fill=color3!80!black,color=color1!80!black}{fill=gray!30!white,color=gray!30!white}}},
+}
+
+\usetikzlibrary{arrows.meta,
+                chains,
+                positioning}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{array}
+
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
